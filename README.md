@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Technology selection
+- Vue3
+- Typescript
+- Element-plus
+- Scss
+- Vuex
+- Vue-Router
