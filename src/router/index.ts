@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,7 +17,11 @@ const routes: Array<RouteRecordRaw> = [
         name: '首页',
         component: () => import('../views/front/Home.vue'),
       },
-      
+      {
+        path: 'infomation',
+        name: '简历',
+        component: () => import('../views/front/简历.vue')
+      }
     ]
   },
   {
