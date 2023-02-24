@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import './assets/css/common.scss'
+import './assets/css/font.scss'
+
 
 const app = createApp(App)
 app.use(store).use(router).mount('#app')

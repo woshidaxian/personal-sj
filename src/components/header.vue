@@ -13,7 +13,33 @@ export default defineComponent({
     const router = useRouter();
     const store = useStore();
     const state = reactive({
-    
+      navList: [
+        {
+          title: 'Home', // 倒计时、天气、当前时间、每日一言
+          icon: '',
+          path: ''
+        },
+        {
+          title: '收藏架', // bug link 
+          icon: '',
+          path: ''
+        },
+        {
+          title: '工具箱',
+          icon: '',
+          path: ''
+        },
+        {
+          title: '图库',
+          icon: '',
+          path: ''
+        },
+        {
+          title: '我',
+          icon: '',
+          path: ''
+        }
+      ]
     })
     onBeforeMount(()=>{
       console.log('onBeforeMount')
@@ -22,6 +48,10 @@ export default defineComponent({
     onMounted(()=>{
       console.log('onMounted')
     })
+
+
+
+    
 
     return {
       ...toRefs(state),
