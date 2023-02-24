@@ -1,5 +1,11 @@
 <template>
-  <div></div>
+  <div class="content">
+    <div class="top-bar">
+      <div class="top-bar-bg"></div>
+    </div>
+    <div class="center-bar"></div>
+    <div class="footer-bar"></div>
+  </div>
 </template>
 
 <script lang='ts'>
@@ -32,4 +38,27 @@ export default defineComponent({
 })
 </script>
 <style lang='scss' scoped>
+.content{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+.top-bar-bg{
+  width: 100%;
+  height: 100vh;
+  background: url('./../../assets/image/earth.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.center-bar{
+  width: 100%;
+  height: 1000px;
+}
+.footer-bar{
+  width: 100%;
+  height: 200px;
+}
 </style>

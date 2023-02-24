@@ -1,8 +1,5 @@
 <template>
-  <div class="content">
-    <v-header></v-header>
-    <router-view></router-view>
-  </div>
+  <div></div>
 </template>
 
 <script lang='ts'>
@@ -35,8 +32,4 @@ export default defineComponent({
 })
 </script>
 <style lang='scss' scoped>
-.content{
-  width: 100%;
-  height: 100%;
-}
 </style>
