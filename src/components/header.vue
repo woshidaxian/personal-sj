@@ -52,6 +52,11 @@ export default defineComponent({
           path: '/frontIndex/images'
         },
         {
+          title: '足  迹',
+          icon: '',
+          path: '/frontIndex/map'
+        },
+        {
           title: '我',
           icon: '',
           path: '/frontIndex/my'
