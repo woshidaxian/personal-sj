@@ -1,5 +1,5 @@
 <template>
-  <div class="header-content flex-row-between" :style="`background: rgba(255, 255, 255, ${opacity})`">
+  <div class="header-content flex-row-between" :style="`background: rgba(255, 255, 255, ${opacity});${opacity>0.7?'height: 50px':''}`">
     <div class="logo">
       <img src="./../assets/image/logo.png" alt="">
     </div>
@@ -8,7 +8,7 @@
         v-for="(item, index) in navList"
         :key="index"
         class="nav-item"
-        :class="{'nav-item-active': activePath==item.path, 'nav-item-black': opacity>0.9}"
+        :class="{'nav-item-active': activePath==item.path, 'nav-item-black': opacity>0.7}"
       >{{item.title}}</div>
     </div>
     <div class="do-box flex-row-center">
@@ -91,11 +91,12 @@ export default defineComponent({
 <style lang='scss' scoped>
 .header-content{
   width: 100%;
-  height: 60px;
+  height: 80px;
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0px 0px 49px 0px #00000066;
+  box-shadow: 0px 0px 49px 0px #0000003c;
+  transition: all .5s;
   .logo{
     width: 200px;
     text-align: left;
@@ -111,11 +112,60 @@ export default defineComponent({
       padding: 0 30px;
       font-family: AliHYAiHei;
       color: rgb(255, 255, 255);
-      font-size: 14px;
+      font-size: 15px;
       letter-spacing: 2px;
+      cursor: pointer;
+      position: relative;
+      &:hover{
+        color: #009ccb;
+        &::after{
+          content: " ";
+          display: block;
+          position: absolute;
+          bottom: -16px;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background: #009ccb;
+          animation: fromWidth forwards .6s;
+        }
+        &::before{
+          content: " ";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 10%;
+          height: 100%;
+          background: #ffffff;
+          mix-blend-mode: overlay;
+          animation: moveFromLeftToRight infinite 2s;
+          transform: skewX(60deg);
+        }
+      }
     }
+    .nav-item-active{
+      color: #009ccb !important;
+      &::after{
+        content: " ";
+        display: block;
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: #009ccb;
+        animation: fromWidth forwards .6s;
+      }
+    }
+    
     .nav-item-black{
       color: black;
+      &:hover{
+        &::before{
+          mix-blend-mode: overlay;
+        }
+      }
     }
   }
   .do-box{

@@ -33,3 +33,19 @@
     color: white;
   }
 }
+@keyframes fromWidth {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes moveFromLeftToRight {
+  from{
+    left: 0;
+  }
+  to{
+    left: 100%;
+  }
+}
