@@ -7,6 +7,11 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/frontIndex'
   },
   {
+    path: '/time',
+    name: '实时时间',
+    component: () => import('./../views/time.vue')
+  },
+  {
     path: '/frontIndex',
     name: '用户端',
     component: () => import('../views/frontIndex.vue'),
