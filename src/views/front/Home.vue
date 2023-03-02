@@ -19,7 +19,7 @@ export default defineComponent({
     const router = useRouter();
     const store = useStore();
     const state = reactive({
-    
+      // 天气、日历、提醒、  每日一言、倒计时、快捷导航（底部）、相册集锦
     })
     onBeforeMount(()=>{
       console.log('onBeforeMount')
@@ -49,7 +49,8 @@ export default defineComponent({
 .top-bar-bg{
   width: 100%;
   height: 100vh;
-  background: url('./../../assets/image/earth.jpg') no-repeat;
+  // background: url('./../../assets/image/earth.jpg') no-repeat;
+  border: 1px solid green;
   background-size: cover;
   background-position: center;
 }
@@ -60,5 +61,6 @@ export default defineComponent({
 .footer-bar{
   width: 100%;
   height: 200px;
+  background: rgba(207, 207, 207, 0.5);
 }
 </style>
